@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %} 
+    <title>Camp WFH Home</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid m-0">
+        <div class="row border-bottom border-dark border-4">
+            <div class="col-lg p-2 ml-3"><h1>Welcome {{thisUser.fname}}!</h1></div>
+            <div class="col-lg p-2 mr-3"><p class="text-right"><a href="/logout" class="btn btn-danger mt-2">Log out</a></p></div>
+        </div>
+    </div>
+    <div class="row bg-info p-5 mb-0">
+        <div class="col-lg p-2 mb-0">
+            <h1 class="text-center text-white fs-2">Select one of the subjects below to begin learning!</h1>
+        </div>
+    </div>
+    <div class="row mt-5" style="height: 500px">
+    <div class="col-sm border border-dark m-3">
+        <p class="text-center">Math</p>
+    </div>
+    <div class="col-sm border border-dark m-3">
+        <p class="text-center">English</p>
+    </div>
+    <div class="col-sm border border-dark m-3">
+        <p class="text-center">Misc</p>
+    </div>
+    </div>
+</body>
+</html>

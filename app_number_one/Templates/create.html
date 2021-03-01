@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %} 
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <title>Camp WFH Home</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid m-0">
+        <div class="row border-bottom border-dark border-4">
+            <div class="col-lg p-2 ml-3"><h1>Welcome!</h1></div>
+            <div class="col-lg p-2 mr-3"><p class="text-right"><a href="/" class="btn btn-primary mt-2">Home</a></p></div>
+        </div>
+        <div class="row bg-info p-5 mb-0">
+            <div class="col-lg p-2 mb-0">
+                <h2 class="text-center text-white">Enter information below to create your account!</h2>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <h1 class="mt-1 mb-3 text-center">Registration</h1>
+            <form action='/adduser' method='post'>
+                {% csrf_token %}
+                First Name:<input type='text' class="form-control" name='fname'>
+                Last Name:<input type='text' class="form-control" name='lname'>
+                Email:<input type='text' class="form-control" name='email'>
+                Password:<input type="password" class="form-control" name='password'>
+                Confirm Password:<input type="password" class="form-control" name='confirm'>
+                <button type='submit' class="btn btn-primary mt-3 mb-3">Register</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
