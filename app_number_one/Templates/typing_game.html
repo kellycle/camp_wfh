@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- link to Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+
+        <!-- link to jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- link to external JavaScript file -->
+        <script src="script.js"></script>
+    <title>Speed Typer</title>
+</head>
+<body class="bg-dark text-white text-center">
+
+    <header class="bg-secondary p-3">
+        <h1>Speed Typer</h1>
+    </header>
+
+    <main class="container mt-5">
+        <!-- phrase and input -->
+        <h2>Type the phrase below within <span id="time-limit"></span> seconds</h2>
+
+        <h3 class="mt-5 w-50 mx-auto" id="phrase"></h3>
+        <textarea class="w-50" id="input" rows="3" placeholder="start typing..." autofocus></textarea>
+        <h3 class="text-danger mt-3" id="game-over"></h3>
+
+        <!-- timer and score -->
+        <div class="row mt-3">
+            <div class="col"><h3>Time Left: <span id="time-left"></span> seconds</h3></div>
+            <div class="col"><h3>Score: <span id="score"></span></h3></div>
+        </div>
+
+        <!-- new game -->
+        <button class="btn btn-primary" id="new-game">New Game</button>
+
+        <!-- instructions -->
+        <p class="w-50 mx-auto bg-secondary p-3 mt-5 rounded-3">
+            Instructions:<br>
+            Type the given phrase before time runs out to move on to the next phrase<br>
+            Click the New Game button to restart the timer
+        </p>
+    </main>
+
+</body>
+</html>
